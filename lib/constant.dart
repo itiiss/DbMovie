@@ -12,3 +12,7 @@ Color uppermodecolor = darkmode;
 Color canvasmodecolor = darkmode;
 Color lowermodecolor = lightmode;
 String selectedbackimg = backimage[1];
+bool isDarkMode = true;
+
+List<String> languageList = <String>['zh-CN', 'en-US'];
+String language = languageList.first;

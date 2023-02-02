@@ -19,8 +19,8 @@ class Index extends StatefulWidget {
 class _IndexState extends State<Index> {
   var pages = [
     const Home(),
-    const More(),
     const Search(),
+    const More(),
   ];
 
   final GlobalKey<CurvedNavigationBarState> _bottomNavigationKey = GlobalKey();
@@ -35,7 +35,7 @@ class _IndexState extends State<Index> {
           extendBody: true,
           body: Stack(
             children: [
-              BackImage(backImage: selectedbackimg),
+              // BackImage(backImage: selectedbackimg),
               pages[widget.index],
             ],
           ),

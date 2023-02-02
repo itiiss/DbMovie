@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'dart:async';
+import '../constant.dart';
 import '../model/models.dart';
 
 class ApiService {
@@ -7,6 +8,7 @@ class ApiService {
 
   final String baseUrl = 'https://api.themoviedb.org/3';
   final String apiKey = 'api_key=63b8501c6f0831659a3f74da125a62fa';
+  final String lang = 'language=$language';
 
   Future<List<Genres>> getGenreList(String mediatype) async {
     try {
@@ -166,7 +168,7 @@ class ApiService {
 
   Future<Moviedetail> getMovieDetail(String id) async {
     try {
-      final url = '$baseUrl/movie/$id?$apiKey';
+      final url = '$baseUrl/movie/$id?$apiKey&$lang';
       final response = await _dio.get(url);
       Moviedetail movie = Moviedetail.fromJson(response.data);
       return movie;
