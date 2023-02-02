@@ -19,13 +19,13 @@ class _MovieState extends State<Movie> {
       shrinkWrap: true,
       scrollDirection: Axis.vertical,
       children: [
-        TitleBar(title: '最受欢迎', navigate: More()),
+        const TitleBar(title: '最受欢迎', navigate: More()),
         ListViewData(future: ApiService().getPopularMovie(), type: 'Movie'),
-        TitleBar(title: '最高评分', navigate: More()),
+        const TitleBar(title: '最高评分', navigate: More()),
         ListViewData(future: ApiService().getTopRatedMovie(), type: 'Movie'),
-        TitleBar(title: '即将上印', navigate: More()),
+        const TitleBar(title: '即将上印', navigate: More()),
         ListViewData(future: ApiService().getUpcomingMovie(), type: 'Movie'),
-        TitleBar(title: '正在热播', navigate: More()),
+        const TitleBar(title: '正在热播', navigate: More()),
         ListViewData(future: ApiService().getNowPlayingMovie(), type: 'Movie')
       ],
     );

@@ -1,3 +1,4 @@
+import 'package:douban/page/detail/movie_detail.dart';
 import 'package:flutter/material.dart';
 
 class ListViewData extends StatelessWidget {
@@ -20,7 +21,15 @@ class ListViewData extends StatelessWidget {
               itemCount: 15,
               itemBuilder: (context, index) {
                 return InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) =>
+                            MovieDetail(id: snapshot.data[index].id),
+                      ),
+                    );
+                  },
                   child: Container(
                     width: 115,
                     margin:
