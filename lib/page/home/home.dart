@@ -20,7 +20,8 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
       children: [
         Container(
           height: 45,
-          margin: const EdgeInsets.symmetric(vertical: 5, horizontal: 20),
+          color: primaryColor,
+          padding: const EdgeInsets.symmetric(horizontal: 124),
           child: Image.asset('assets/tmdb.png', width: 180, height: 90),
         ),
         const SizedBox(

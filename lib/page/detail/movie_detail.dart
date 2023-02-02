@@ -118,6 +118,8 @@ class MovieDetail extends StatelessWidget {
                         padding: const EdgeInsets.all(12),
                         child: Text(
                           snapshot.data.overview,
+                          overflow: TextOverflow.ellipsis,
+                          maxLines: 16,
                           style: TextStyle(
                             fontSize: 18,
                             color: uppermodecolor,

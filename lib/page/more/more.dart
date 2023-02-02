@@ -10,11 +10,11 @@ class More extends StatefulWidget {
 }
 
 class _MoreState extends State<More> {
-  TextStyle headingStyle = const TextStyle(
-      fontSize: 16, fontWeight: FontWeight.w600, color: darkmode);
+  TextStyle headingStyle = TextStyle(
+      fontSize: 16, fontWeight: FontWeight.w600, color: uppermodecolor);
 
-  TextStyle itemStyle = const TextStyle(
-      fontSize: 12, fontWeight: FontWeight.w600, color: darkmode);
+  TextStyle itemStyle = TextStyle(
+      fontSize: 12, fontWeight: FontWeight.w600, color: uppermodecolor);
 
   void toggleDarkMode(val) {
     isDarkMode = val;
@@ -24,13 +24,15 @@ class _MoreState extends State<More> {
         uppermodecolor = darkmode;
         oppositecolor = Colors.black54;
         selectedbackimg = backimage[1];
+        primaryColor = darkmode;
       });
     } else {
       setState(() {
-        canvasmodecolor = Colors.white54;
+        canvasmodecolor = Colors.white;
         uppermodecolor = lightmode;
-        oppositecolor = Colors.white70;
+        oppositecolor = Colors.white;
         selectedbackimg = backimage[0];
+        primaryColor = cyan;
       });
     }
     Navigator.push(
@@ -50,11 +52,11 @@ class _MoreState extends State<More> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text(
+            Text(
               '设置',
               style: TextStyle(
                 fontSize: 24,
-                color: darkmode,
+                color: uppermodecolor,
                 fontWeight: FontWeight.w800,
               ),
             ),
@@ -71,8 +73,8 @@ class _MoreState extends State<More> {
               ],
             ),
             ListTile(
-              iconColor: darkmode,
-              textColor: darkmode,
+              iconColor: uppermodecolor,
+              textColor: uppermodecolor,
               leading: const Icon(Icons.language),
               title: const Text('语言'),
               trailing: DropdownButton(
@@ -96,8 +98,8 @@ class _MoreState extends State<More> {
             ),
             const Divider(),
             ListTile(
-              iconColor: darkmode,
-              textColor: darkmode,
+              iconColor: uppermodecolor,
+              textColor: uppermodecolor,
               leading: const Icon(Icons.dark_mode),
               title: const Text("黑暗模式"),
               trailing: Switch(

@@ -1,6 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:douban/component/list_view.dart';
 import 'package:douban/component/title_bar.dart';
+import 'package:douban/constant.dart';
 import 'package:douban/page/detail/movie_detail.dart';
 import 'package:douban/page/more/more.dart';
 import 'package:flutter/material.dart';
@@ -33,7 +34,7 @@ class _FeedState extends State<Feed> {
                         );
                       },
                       child: Container(
-                        margin: const EdgeInsets.symmetric(horizontal: 5),
+                        padding: const EdgeInsets.symmetric(horizontal: 60),
                         child: ClipRRect(
                           borderRadius:
                               const BorderRadius.all(Radius.circular(20)),
