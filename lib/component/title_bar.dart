@@ -10,32 +10,37 @@ class TitleBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 8),
-          child: Text(
-            title,
-            style: TextStyle(
-              fontSize: 22,
-              fontWeight: FontWeight.w300,
-              color: uppermodecolor,
+    return DecoratedBox(
+      decoration: BoxDecoration(
+        color: primaryColor,
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 8),
+            child: Text(
+              title,
+              style: TextStyle(
+                fontSize: 22,
+                fontWeight: FontWeight.w300,
+                color: uppermodecolor,
+              ),
             ),
           ),
-        ),
-        TextButton(
-          onPressed: () {},
-          child: Text(
-            '全部',
-            style: TextStyle(
-              fontSize: 18,
-              color: uppermodecolor,
-              fontWeight: FontWeight.w100,
+          TextButton(
+            onPressed: () {},
+            child: Text(
+              '全部',
+              style: TextStyle(
+                fontSize: 18,
+                color: uppermodecolor,
+                fontWeight: FontWeight.w100,
+              ),
             ),
-          ),
-        )
-      ],
+          )
+        ],
+      ),
     );
   }
 }
