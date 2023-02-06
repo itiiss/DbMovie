@@ -76,9 +76,9 @@ class _FeedState extends State<Feed> {
       scrollDirection: Axis.vertical,
       children: [
         banner(),
-        TitleBar(title: '热门电影', navigate: More()),
+        const TitleBar(title: '热门电影', navigate: More()),
         ListViewData(future: ApiService().getTrendingMovie(), type: 'Movie'),
-        TitleBar(title: '热门电视剧', navigate: More()),
+        const TitleBar(title: '热门电视剧', navigate: More()),
         ListViewData(future: ApiService().getTrendingTVshow(), type: 'TVShow'),
       ],
     );
