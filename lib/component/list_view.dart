@@ -1,3 +1,4 @@
+import 'package:douban/model/models.dart';
 import 'package:douban/page/detail/movie_detail.dart';
 import 'package:flutter/material.dart';
 
@@ -6,7 +7,7 @@ class ListViewData extends StatelessWidget {
       : super(key: key);
 
   final Future future;
-  final String type;
+  final ShowType type;
 
   @override
   Widget build(BuildContext context) {
@@ -25,8 +26,10 @@ class ListViewData extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) =>
-                            MovieDetail(id: snapshot.data[index].id),
+                        builder: (context) => MovieDetail(
+                          id: snapshot.data[index].id,
+                          type: type,
+                        ),
                       ),
                     );
                   },

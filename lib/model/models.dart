@@ -1,3 +1,5 @@
+enum ShowType { movie, tvshow }
+
 class Mixed {
   bool? adult;
   String? backdropPath;

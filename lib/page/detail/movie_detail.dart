@@ -1,11 +1,14 @@
 import 'package:douban/constant.dart';
+import 'package:douban/model/models.dart';
 import 'package:douban/service/service.dart';
 import 'package:flutter/material.dart';
 
 class MovieDetail extends StatelessWidget {
-  const MovieDetail({Key? key, required this.id}) : super(key: key);
+  const MovieDetail({Key? key, required this.id, required this.type})
+      : super(key: key);
 
   final int id;
+  final ShowType type;
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +17,9 @@ class MovieDetail extends StatelessWidget {
       theme: ThemeData(canvasColor: oppositecolor),
       home: Scaffold(
         body: FutureBuilder(
-          future: ApiService().getMovieDetail(id.toString()),
+          future: type == ShowType.movie
+              ? ApiService().getMovieDetail(id.toString())
+              : ApiService().getTVDetail(id.toString()),
           builder: (BuildContext context, AsyncSnapshot snapshot) {
             if (snapshot.hasData) {
               return Stack(

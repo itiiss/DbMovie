@@ -18,23 +18,23 @@ class _MoreState extends State<More> {
 
   void toggleDarkMode(val) {
     isDarkMode = val;
-    if (val) {
-      setState(() {
-        canvasmodecolor = Colors.black54;
-        uppermodecolor = darkmode;
-        oppositecolor = Colors.black54;
-        selectedbackimg = backimage[1];
-        primaryColor = darkmode;
-      });
-    } else {
-      setState(() {
-        canvasmodecolor = Colors.white;
-        uppermodecolor = lightmode;
-        oppositecolor = Colors.white;
-        selectedbackimg = backimage[0];
-        primaryColor = cyan;
-      });
-    }
+    // if (val) {
+    //   setState(() {
+    //     canvasmodecolor = Colors.black54;
+    //     uppermodecolor = darkmode;
+    //     oppositecolor = Colors.black54;
+    //     selectedbackimg = backimage[1];
+    //     primaryColor = darkmode;
+    //   });
+    // } else {
+    //   setState(() {
+    //     canvasmodecolor = Colors.white;
+    //     uppermodecolor = lightmode;
+    //     oppositecolor = Colors.white;
+    //     selectedbackimg = backimage[0];
+    //     primaryColor = cyan;
+    //   });
+    // }
     Navigator.push(
       context,
       MaterialPageRoute(

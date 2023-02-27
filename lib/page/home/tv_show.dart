@@ -1,3 +1,4 @@
+import 'package:douban/model/models.dart';
 import 'package:flutter/material.dart';
 
 import '../../component/list_view.dart';
@@ -20,13 +21,25 @@ class _TvShowState extends State<TvShow> {
       scrollDirection: Axis.vertical,
       children: [
         const TitleBar(title: '最受欢迎', navigate: More()),
-        ListViewData(future: ApiService().getPopularTVshow(), type: 'Movie'),
+        ListViewData(
+          future: ApiService().getPopularTVshow(),
+          type: ShowType.tvshow,
+        ),
         const TitleBar(title: '最高评分', navigate: More()),
-        ListViewData(future: ApiService().getTopRatedTVshow(), type: 'Movie'),
+        ListViewData(
+          future: ApiService().getTopRatedTVshow(),
+          type: ShowType.tvshow,
+        ),
         const TitleBar(title: '即将上印', navigate: More()),
-        ListViewData(future: ApiService().getUpcomingTVshow(), type: 'Movie'),
+        ListViewData(
+          future: ApiService().getUpcomingTVshow(),
+          type: ShowType.tvshow,
+        ),
         const TitleBar(title: '正在热播', navigate: More()),
-        ListViewData(future: ApiService().getNowPlayingTVshow(), type: 'Movie')
+        ListViewData(
+          future: ApiService().getNowPlayingTVshow(),
+          type: ShowType.tvshow,
+        )
       ],
     );
   }
